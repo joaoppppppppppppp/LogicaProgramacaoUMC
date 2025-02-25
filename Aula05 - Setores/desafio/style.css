@@ -1,0 +1,17 @@
+body {
+    width: 51vw;
+    background-color:  rgba(206, 60, 60, 0.24);
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#Titulo1 {
+    background-color: rgba(167, 2, 2, 0.651);
+
+}
+span {
+    border: 2px solid;
+}
