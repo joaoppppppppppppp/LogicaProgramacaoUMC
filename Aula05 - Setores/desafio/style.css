@@ -12,6 +12,27 @@ h1 {
     background-color: rgba(167, 2, 2, 0.651);
 
 }
+
+#Titulo2 {
+    background-color: rgba(207, 135, 40, 0.651);
+}
 span {
     border: 2px solid;
+}
+
+.paragrafo {
+    text-decoration-color: blue;
+}
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: underline;
 }
