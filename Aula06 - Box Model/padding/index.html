@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model - Padding</title>
+
+    <style>
+
+        .box {
+            border: solid 2px black;
+            margin-bottom: 3%;
+            margin-left: 17%;
+            margin-right: 17%;
+            padding: 40px 40px;
+            text-align: center;
+            background-color: rgba(139, 0, 0, 0.37);
+            font-size: 18px;
+            border-radius: 15px;
+            box-align: center;
+        }
+        #box1:hover{            
+            background-color: rgba(0, 0, 255, 0.288);
+             }
+        #box1{            
+            padding-left: 0px;
+            padding-right: 700px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        #box2:hover{
+            background-color: rgba(0, 0, 255, 0.288);
+        }
+        #box3:hover {
+            background-color: rgba(0, 0, 255, 0.288);
+             }
+        #box3{
+            padding-left: 700px;
+            padding-right: 0px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section>
+        
+        <h1>Box Model</h1>
+
+        <div class="box" id="box1"> 
+            Esta é a primeira caixa
+        </div>
+
+        <p> </p>
+
+        <div class="box" id="box2"> 
+            Esta é a segunda caixa
+        </div>
+
+        <p> </p>
+
+        <div class="box" id="box3"> 
+            Esta é a terceira caixa
+        </div>
+
+
+    </section>    
+
+</body>
+</html>

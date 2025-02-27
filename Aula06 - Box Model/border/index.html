@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model - Border</title>
+
+    <style>
+
+        .box {
+            width: 300px;
+            height: 150px;
+            text-align: center;
+            background-color: rgba(139, 0, 0, 0.37);
+            font-size: 18px;
+            border-radius: 15px;
+            box-align: center;
+        }
+
+        #box1 {
+            border: 2px solid black;
+            box-shadow: -2px black;
+        }
+
+        #box2 {
+
+            border-color: darkblue;
+            border-style: double;
+            border-width: 7px;
+            box-shadow: 1px 1px 1px 1px rgb(0, 0, 0) inset;
+        }
+
+        #box3 {
+            border-bottom: 3px;
+            border-right: 3px;
+            border-top: 3px;
+            border-left: 3px;
+            border-style: dashed;
+            border-bottom-color: rgb(255, 0, 0);
+            border-left-color: rgb(0, 4, 255);
+            border-right-color: rgb(0, 4, 255);
+            border-top-color: rgb(255, 0, 0);
+            border-radius: 25px 25px 100px 100px;
+            box-shadow: 1px -1px -1px -1px rgb(0, 0, 0);
+        }
+        
+    </style>
+
+</head>
+<body>
+    <section>
+        
+        <h1>Box Model</h1>
+
+        <div class="box" id="box1"> 
+            Esta é a primeira caixa
+        </div>
+
+        <p> </p>
+
+        <div class="box" id="box2"> 
+            Esta é a segunda caixa
+        </div>
+
+        <p> </p>
+
+        <div class="box" id="box3"> 
+            Esta é a terceira caixa
+        </div>
+
+
+    </section>    
+
+</body>
+</html>
