@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Exemplo Formulário</h1>
+
+    <form action="">
+
+        <p>
+            <label for="nome">Nome Completo: </label>
+            <input type="text" id="nome" placeholder="Digite seu nome:" required>
+        </p>
+
+        <p>
+            <label for="email">Email: </label>
+            <input type="email" id="email" required autocomplete="on">
+        </p>
+
+        <p>
+            <label for="data">Data: </label>
+            <input type="date" id="data" required>
+        </p>
+
+        <p>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" required="warning">
+        </p>
+
+        <p>
+            <label for="number">Celular: </label>
+            <input type="number" id="number" required>
+        </p>
+
+        <p>
+            <label for="mensagem">Reclamação</label>
+            <textarea name="mensagem" id="mensagem"></textarea>
+        </p>
+
+        <p>
+            <label for="estados">Estados:</label>
+            <select name="estados" id="estados">
+                <option value="sp">São Paulo</option>
+                <option value="rj">Rio de Janeiro</option>
+                <option value="mg">Minas Gerais</option>
+                <option value="es">Espírito Santo</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="esportes">Esportes Favoritos: </label> <br>
+            <input type="checkbox" name="esportes" value="futebol"> Futebol <br>
+            <input type="checkbox" name="esportes" value="volei"> Vôlei <br>
+            <input type="checkbox" name="esportes" value="basquete"> Basquete <br>
+            <input type="checkbox" name="esportes" value="natação"> Natação <br>
+        </p>
+
+        <p>
+            <label for="">Curso</label> <br>
+            <input type="radio" name="curso" id="ADS"> ADS <br>
+            <input type="radio" name="curso" id="ES"> Engenharia de Software <br>
+            <input type="radio" name="curso" id="cienciacomp"> Ciência da Computação <br>
+            <input type="radio" name="curso" id="sisinf"> Sistema da Informação <br>
+        </p>
+
+
+        <p>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </p>
+
+    </form>
+
+
+</body>
+</html>

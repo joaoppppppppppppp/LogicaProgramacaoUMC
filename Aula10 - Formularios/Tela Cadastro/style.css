@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.103);
+    max-width: 40vw;
+    margin: 50px auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+
+}
+
+input, select {
+    padding: 8px;
+    width: 100%;
+    margin: 5px 0px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: rgba(0, 0, 255, 0.63);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 48%;
+    margin-top: 15px;
+}
+
+button[type="reset"]{
+    background-color: rgba(255, 0, 0, 0.719);
+}
+
+
+
+
+
+
+
+
+
+
+
+main>form>select {
+    color: #000; /* Cor padrão do texto */
+  }
+  
+main>form>select>option.placeholder {
+    color: rgba(0, 0, 0, 0.5); /* Cor mais transparente */
+    font-style: italic; /* Opcional, para dar mais efeito de placeholder */
+  }
