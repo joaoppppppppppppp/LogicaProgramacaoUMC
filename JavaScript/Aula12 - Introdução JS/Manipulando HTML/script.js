@@ -8,11 +8,11 @@ window.document.body.style.color = "white"
 window.document.body.innerHTML += "<h1>Brasil x Argentina</h1>"
 
 //Exibindo um Alerta
-//window.alert("Olá Mundo")
+window.alert("Olá Mundo")
 
 //Exibir uma Tela de Entrada de Dados
-//var continuar = window.prompt("Você deseja continuar?")
-//window.alert(continuar)
+var continuar = window.prompt("Você deseja continuar?")
+window.alert(continuar)
 
 //Exibir uma Tela de Confirmação
 continuar = window.confirm("Você deseja continuar?")
