@@ -43,21 +43,50 @@
                         $stmt->bind_param("s" , $email);
                         $stmt->execute();
                         $resultado = $stmt->get_result();
-                        echo var_dump($resultado);
 
+                        
                         if($resultado->num_rows > 0) { 
-                            echo "Email existente";
-
                             $row = $resultado->fetch_assoc();
-                            echo var_dump($row);
-                            
-                    } else { 
-                        echo "Email inexistente";
+                            echo "<table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nome</th>
+                                        <th>Sobrenome</th>
+                                        <th>Email</th>
+                                        <th>Excluir</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <td>{$row['ID']}</td>
+                                    <td>{$row['NOME']}</td>
+                                    <td>{$row['SOBRENOME']}</td>
+                                    <td>{$row['EMAIL']}</td>
+                                    <td>
+                                        <form action='excluirCadastro.php' method='post'>
+                                            <input type='hidden' name='id' value='{row['ID']}'>
+                                            <input type='submit' id='btn-excluir' value='Excluir'>
+                                        </form>
+                                    </td>
+                                </tbody>
+                            </table>
+                            ";
+                    }else {
+                        echo "<div class='mensagem erro'> E-mail $email não encontrado </div>";
                     }
+                    $stmt->close();
 
                 }
+                    
+                    $conn->close();
+                    
             }
-            
+                
+                
+            else {
+                    echo "<div class='mensagem erro'>Erro na Consulta</div>";
+                }
+
             ?>
         </section>
     </main>
