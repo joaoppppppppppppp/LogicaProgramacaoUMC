@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../estilos/styleVerificar.css">
 </head>
 <body>
-
     <header>
         <nav>
             <ul>
@@ -30,20 +29,28 @@
                 <input type="submit" value="Buscar">
             </form>
         </section>
-
         <section>
+            
             <?php 
 
+                //Verificar se o $POST['CURSO'] está vazio
                 if (isset($_POST["curso"])) {
+
+                    //Chamar a conexão com o DB
                     include("../conexao/conexao.php");
+
+                    //Salvar a informação do curso selecionado
                     $curso = $_POST["curso"];
 
+                    //Consulta SQL
                     $sql = "SELECT * FROM usuarios WHERE curso = ?";
-
+                    
+                    //Preparar a consulta SQL junto da conexão
                     $stmt = $conn->prepare($sql);
 
+                    //Verificar se a conexão foi bem-sucedida
                     if ($stmt) {
-                        $stmt->bind_param("s", $curso);
+                        $stmt->bind_param("s" , $curso);
                         $stmt->execute();
                         $resultado = $stmt->get_result();
                         
@@ -52,15 +59,16 @@
                                 <table>
                                     <thead>
                                         <tr>
+                                            <th>ID</th>
                                             <th>Nome</th>
                                             <th>Sobrenome</th>
-                                            <th>Nota ATividade</th>
+                                            <th>Nota Atividade</th>
                                             <th>Nota Prova</th>
                                             <th>Nota Final</th>
                                         </tr>
                                     </thead>
                                     <tbody> ";
-                                        while($row = $resultado->fetch_assoc()) {
+                                        while($row = $resultado->fetch_assoc()){
                                         echo "
                                             <tr>
                                                 <td>{$row['id']}</td>
@@ -73,11 +81,10 @@
                                         }
                             echo "
                                     </tbody>
-                                </table>
-
+                                </table>  
                             ";
                         } else {
-                            echo "<div class= 'mensagem erro'>Curso $curso não possui registros</div>";
+                            echo "<div class = 'mensagem erro'>Esse $curso não possui registros de usuários</div>";
                         }
 
                         $stmt->close();
@@ -86,9 +93,12 @@
                     $conn->close();
                 }
 
+
             ?>
+
         </section>
     </main>
+    
     
 </body>
 </html>
