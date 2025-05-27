@@ -73,13 +73,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <td>{$row['id']}</td>
-                                        <td>{$row['nome']}</td>
-                                        <td>{$row['sobrenome']}</td>
-                                        <td>{$row['email']}</td>
+                                        <td>{$row['ID']}</td>
+                                        <td>{$row['NOME']}</td>
+                                        <td>{$row['SOBRENOME']}</td>
+                                        <td>{$row['EMAIL']}</td>
                                         <td>
                                             <form action='excluirCadastro.php' method='post'>
-                                                <input type='hidden' name='id' value='{$row['id']}'>
+                                                <input type='hidden' name='id' value='{$row['ID']}'>
                                                 <input type='submit' id='btn-excluir' value='Excluir'>
                                             </form>
                                         </td>
