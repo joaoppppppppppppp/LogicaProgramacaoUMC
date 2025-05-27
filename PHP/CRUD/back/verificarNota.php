@@ -84,7 +84,7 @@
                                 </table>  
                             ";
                         } else {
-                            echo "<div class = 'mensagem erro'>Esse $curso não possui registros de usuários</div>";
+                            echo "<div class = 'mensagem erro'>Esse curso não possui registros de usuários</div>";
                         }
 
                         $stmt->close();
