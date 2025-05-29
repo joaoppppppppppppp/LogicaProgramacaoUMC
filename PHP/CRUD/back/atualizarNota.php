@@ -12,14 +12,14 @@
             <ul>
                 <li><a href="../index.php">Início</a></li>
                 <li><a href="cadastro.php">Cadastrar Usuário</a></li>
-                <li><a href="">Listas Usuários</a></li>
+                <li><a href="verificarCadastro.php">Listas Usuários</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="containerSection">
-            <form action="verificarNota.php" method="post">
+            <form action="atualizarNota.php" method="post">
                 <select name="curso" id="curso" class="estilo">
                     <option value="ads">Análise e Desenvolvimento de Sistemas</option>
                     <option value="engenharia_software">Engenharia de Software</option>
@@ -56,6 +56,7 @@
                         
                         if ($resultado->num_rows > 0) {
                             echo "
+                            <form action='processaNota.php' method='post' id='form-nota'>
                                 <table>
                                     <thead>
                                         <tr>
@@ -64,7 +65,6 @@
                                             <th>Sobrenome</th>
                                             <th>Nota Atividade</th>
                                             <th>Nota Prova</th>
-                                            <th>Nota Final</th>
                                         </tr>
                                     </thead>
                                     <tbody> ";
@@ -74,15 +74,21 @@
                                                 <td>{$row['ID']}</td>
                                                 <td>{$row['NOME']}</td>
                                                 <td>{$row['SOBRENOME']}</td>
-                                                <td>{$row['NOTA_ATIVIDADE']}</td>
-                                                <td>{$row['NOTA_PROVA']}</td>
-                                                <td>{$row['NOTA_FINAL']}</td>
+                                                <td>
+                                                    <input type='number' name='nota_atividade[{$row['ID']}]' required>
+                                                </td>
+                                                <td>
+                                                    <input type='number' name='nota_prova[{$row['ID']}]' required>
+                                                </td>
                                             </tr> ";
                                         }
                             echo "
                                     </tbody>
                                 </table>  
                             ";
+                            echo 
+                                "<input type='submit' value='Enviar'>
+                                </form>";
                         } else {
                             echo "<div class = 'mensagem erro'>Esse $curso não possui registros de usuários</div>";
                         }
@@ -93,7 +99,13 @@
                     $conn->close();
                 }
 
+                
+            ?>
 
+            <?php 
+                if(isset($_GET['excluido']) && $_GET['excluido'] == 1) {
+                    echo "<div class='mensagem sucesso'>Nota atualizada com sucesso</div>";
+                }
             ?>
 
         </section>

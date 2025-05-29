@@ -31,8 +31,8 @@
             <label for="email">E-mail:</label>
             <input type="email" name="email" id="email" required>
 
-            <label for="CURSO">Selecione o curso: </label>
-            <select name="CURSO" id="CURSO">
+            <label for="curso">Selecione o curso: </label>
+            <select name="curso" id="curso">
                 <option value="ads">Análise e Desenvolvimento de Sistemas</option>
                 <option value="engenharia_software">Engenharia de Software</option>
                 <option value="sistemas_informacao">Sistema da Informação</option>
@@ -61,7 +61,7 @@
                     $id = $prefixo . rand(100,999);
 
                     //Consulta SQL 
-                    $sql = "INSERT INTO usuarios (ID, NOME, SOBRENOME, EMAIL, CURSO)  VALUES (?, ?, ?, ?, ?)";
+                    $sql = "INSERT INTO usuarios (id, nome, sobrenome, email, curso)  VALUES (?, ?, ?, ?, ?)";
 
                     //Preparar a consulta
                     $stmt = $conn->prepare($sql);
